@@ -66,7 +66,7 @@ Technologies:
 
 Report is made in Looker Studuo.
 
-🚲 TfL Cycle Counts Dashboard https://lookerstudio.google.com/s/qFuxFnhJlaQ
+🚲 TfL Cycle Counts Dashboard https://lookerstudio.google.com/reporting/14de3dbc-45cc-459f-bc57-d26f43a692ad
 
 🔷 Key Themes: Cycle counts (Flow) Based Metrics 
 

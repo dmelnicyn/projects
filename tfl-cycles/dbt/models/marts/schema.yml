@@ -1,0 +1,502 @@
+version: 3
+
+models:
+  - name: dim_functional_areas
+    description: ""
+    columns:
+      - name: prefix
+        data_type: string
+        description: ""
+
+      - name: description
+        data_type: string
+        description: ""
+
+  - name: dim_monitoring_locations
+    description: ""
+    columns:
+      - name: site_id
+        data_type: string
+        description: ""
+
+      - name: location_description
+        data_type: string
+        description: ""
+
+      - name: borough
+        data_type: string
+        description: ""
+
+      - name: functional_area
+        data_type: string
+        description: ""
+
+      - name: road_type
+        data_type: string
+        description: ""
+
+      - name: easting_uk_grid
+        data_type: float64
+        description: ""
+
+      - name: northing_uk_grid
+        data_type: float64
+        description: ""
+
+      - name: latitude
+        data_type: float64
+        description: ""
+
+      - name: longitude
+        data_type: float64
+        description: ""
+
+  - name: dim_road_types
+    description: ""
+    columns:
+      - name: prefix
+        data_type: string
+        description: ""
+
+      - name: description
+        data_type: string
+        description: ""
+
+  - name: fct_active_counts
+    description: ""
+    columns:
+      - name: wave
+        data_type: string
+        description: ""
+
+      - name: site_id
+        data_type: string
+        description: ""
+
+      - name: date
+        data_type: date
+        description: ""
+
+      - name: time
+        data_type: time
+        description: ""
+
+      - name: weather
+        data_type: string
+        description: ""
+
+      - name: day
+        data_type: string
+        description: ""
+
+      - name: round
+        data_type: string
+        description: ""
+
+      - name: direction
+        data_type: string
+        description: ""
+
+      - name: path
+        data_type: string
+        description: ""
+
+      - name: mode
+        data_type: string
+        description: ""
+
+      - name: count
+        data_type: int64
+        description: ""
+
+  - name: fct_active_counts_aggregated
+    description: ""
+    columns:
+      - name: wave
+        data_type: string
+        description: ""
+
+      - name: site_id
+        data_type: string
+        description: ""
+
+      - name: functional_area
+        data_type: string
+        description: ""
+
+      - name: road_type
+        data_type: string
+        description: ""
+
+      - name: borough
+        data_type: string
+        description: ""
+
+      - name: longitude
+        data_type: float64
+        description: ""
+
+      - name: latitude
+        data_type: float64
+        description: ""
+
+      - name: avg_weekday_daily_flow
+        data_type: float64
+        description: ""
+
+  - name: fct_active_counts_with_dimensions
+    description: ""
+    columns:
+      - name: wave
+        data_type: string
+        description: ""
+
+      - name: site_id
+        data_type: string
+        description: ""
+
+      - name: date
+        data_type: date
+        description: ""
+
+      - name: time
+        data_type: time
+        description: ""
+
+      - name: weather
+        data_type: string
+        description: ""
+
+      - name: day
+        data_type: string
+        description: ""
+
+      - name: round
+        data_type: string
+        description: ""
+
+      - name: direction
+        data_type: string
+        description: ""
+
+      - name: path
+        data_type: string
+        description: ""
+
+      - name: mode
+        data_type: string
+        description: ""
+
+      - name: count
+        data_type: int64
+        description: ""
+
+      - name: location_description
+        data_type: string
+        description: ""
+
+      - name: borough
+        data_type: string
+        description: ""
+
+      - name: functional_area
+        data_type: string
+        description: ""
+
+      - name: road_type
+        data_type: string
+        description: ""
+
+      - name: easting_uk_grid
+        data_type: float64
+        description: ""
+
+      - name: northing_uk_grid
+        data_type: float64
+        description: ""
+
+      - name: latitude
+        data_type: float64
+        description: ""
+
+      - name: longitude
+        data_type: float64
+        description: ""
+
+  - name: fct_combined_aggr_counts
+    description: ""
+    columns:
+      - name: wave
+        data_type: string
+        description: ""
+
+      - name: site_id
+        data_type: string
+        description: ""
+
+      - name: functional_area
+        data_type: string
+        description: ""
+
+      - name: road_type
+        data_type: string
+        description: ""
+
+      - name: borough
+        data_type: string
+        description: ""
+
+      - name: longitude
+        data_type: float64
+        description: ""
+
+      - name: latitude
+        data_type: float64
+        description: ""
+
+      - name: avg_weekday_daily_flow
+        data_type: float64
+        description: ""
+
+      - name: season
+        data_type: string
+        description: ""
+
+  - name: fct_cycleways
+    description: ""
+    columns:
+      - name: wave
+        data_type: string
+        description: ""
+
+      - name: site_id
+        data_type: string
+        description: ""
+
+      - name: date
+        data_type: date
+        description: ""
+
+      - name: time
+        data_type: time
+        description: ""
+
+      - name: weather
+        data_type: string
+        description: ""
+
+      - name: day
+        data_type: string
+        description: ""
+
+      - name: round
+        data_type: string
+        description: ""
+
+      - name: direction
+        data_type: string
+        description: ""
+
+      - name: path
+        data_type: string
+        description: ""
+
+      - name: mode
+        data_type: string
+        description: ""
+
+      - name: count
+        data_type: int64
+        description: ""
+
+  - name: fct_cycleways_counts_aggregated
+    description: ""
+    columns:
+      - name: wave
+        data_type: string
+        description: ""
+
+      - name: site_id
+        data_type: string
+        description: ""
+
+      - name: functional_area
+        data_type: string
+        description: ""
+
+      - name: road_type
+        data_type: string
+        description: ""
+
+      - name: borough
+        data_type: string
+        description: ""
+
+      - name: longitude
+        data_type: float64
+        description: ""
+
+      - name: latitude
+        data_type: float64
+        description: ""
+
+      - name: avg_weekday_daily_flow
+        data_type: float64
+        description: ""
+
+  - name: fct_cycleways_with_dimensions
+    description: ""
+    columns:
+      - name: wave
+        data_type: string
+        description: ""
+
+      - name: site_id
+        data_type: string
+        description: ""
+
+      - name: date
+        data_type: date
+        description: ""
+
+      - name: time
+        data_type: time
+        description: ""
+
+      - name: weather
+        data_type: string
+        description: ""
+
+      - name: day
+        data_type: string
+        description: ""
+
+      - name: round
+        data_type: string
+        description: ""
+
+      - name: direction
+        data_type: string
+        description: ""
+
+      - name: path
+        data_type: string
+        description: ""
+
+      - name: mode
+        data_type: string
+        description: ""
+
+      - name: count
+        data_type: int64
+        description: ""
+
+      - name: location_description
+        data_type: string
+        description: ""
+
+      - name: borough
+        data_type: string
+        description: ""
+
+      - name: functional_area
+        data_type: string
+        description: ""
+
+      - name: road_type
+        data_type: string
+        description: ""
+
+      - name: easting_uk_grid
+        data_type: float64
+        description: ""
+
+      - name: northing_uk_grid
+        data_type: float64
+        description: ""
+
+      - name: latitude
+        data_type: float64
+        description: ""
+
+      - name: longitude
+        data_type: float64
+        description: ""
+
+  - name: fct_weekday_cycle_km_per_km
+    description: ""
+    columns:
+      - name: functional_area
+        data_type: string
+        description: ""
+
+      - name: total_cycle_km
+        data_type: float64
+        description: ""
+
+      - name: total_network_km
+        data_type: float64
+        description: ""
+
+      - name: cycle_km_per_km
+        data_type: float64
+        description: ""
+
+  - name: fct_weekday_cycle_km_volume
+    description: ""
+    columns:
+      - name: wave
+        data_type: string
+        description: ""
+
+      - name: functional_area
+        data_type: string
+        description: ""
+
+      - name: road_type
+        data_type: string
+        description: ""
+
+      - name: group_avg_flow
+        data_type: float64
+        description: ""
+
+      - name: group_length_km
+        data_type: float64
+        description: ""
+
+      - name: weekday_cycle_km
+        data_type: float64
+        description: ""
+  - name: fct_counts_change
+    description: >
+      Calculates percentage changes in average weekday cycle flows per location
+      across key benchmark years: the previous year, 2019 (pre-pandemic), and 2015 (start of program).
+    columns:
+      - name: site_id
+        description: "Unique identifier of the monitoring location"
+        tests:
+          - not_null
+
+      - name: latest_flow
+        description: "Most recent average weekday daily flow (latest year available)"
+        tests:
+          - not_null
+
+      - name: flow_last_year
+        description: "Average weekday daily flow in the previous year"
+      
+      - name: flow_2019
+        description: "Average weekday daily flow in the year 2019"
+
+      - name: flow_2015
+        description: "Average weekday daily flow in the year 2015"
+
+      - name: pct_change_since_last_year
+        description: "Percentage change in flow compared to the previous year"
+
+      - name: pct_change_since_2019
+        description: "Percentage change in flow compared to 2019 (pre-pandemic baseline)"
+
+      - name: pct_change_since_2015
+        description: "Percentage change in flow compared to 2015 (start of Active Travel Counts Programme)"

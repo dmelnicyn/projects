@@ -1,0 +1,147 @@
+# models/staging/schema.yml
+
+version: 2
+
+sources:
+  - name: staging
+    database: your_database_name
+    schema: your_database_schema
+
+    tables:
+      - name: cycleways_external_table
+      - name: active_counts_external_table
+      - name: monitoring_locations_external_table
+
+models:
+  - name: stg_cycleways
+    description: ""
+    columns:
+      - name: wave
+        data_type: string
+        description: ""
+
+      - name: site_id
+        data_type: string
+        description: ""
+
+      - name: date
+        data_type: date
+        description: ""
+
+      - name: weather
+        data_type: string
+        description: ""
+
+      - name: time
+        data_type: time
+        description: ""
+
+      - name: day
+        data_type: string
+        description: ""
+
+      - name: round
+        data_type: string
+        description: ""
+
+      - name: direction
+        data_type: string
+        description: ""
+
+      - name: path
+        data_type: string
+        description: ""
+
+      - name: mode
+        data_type: string
+        description: ""
+
+      - name: count
+        data_type: int64
+        description: ""
+
+  - name: stg_active_counts
+    description: ""
+    columns:
+      - name: wave
+        data_type: string
+        description: ""
+
+      - name: site_id
+        data_type: string
+        description: ""
+
+      - name: date
+        data_type: date
+        description: ""
+
+      - name: weather
+        data_type: string
+        description: ""
+
+      - name: time
+        data_type: time
+        description: ""
+
+      - name: day
+        data_type: string
+        description: ""
+
+      - name: round
+        data_type: string
+        description: ""
+
+      - name: direction
+        data_type: string
+        description: ""
+
+      - name: path
+        data_type: string
+        description: ""
+
+      - name: mode
+        data_type: string
+        description: ""
+
+      - name: count
+        data_type: int64
+        description: ""
+
+  - name: stg_monitoring_locations
+    description: ""
+    columns:
+      - name: site_id
+        data_type: string
+        description: ""
+
+      - name: location_description
+        data_type: string
+        description: ""
+
+      - name: borough
+        data_type: string
+        description: ""
+
+      - name: functional_area
+        data_type: string
+        description: ""
+
+      - name: road_type
+        data_type: string
+        description: ""
+
+      - name: easting_uk_grid
+        data_type: float64
+        description: ""
+
+      - name: northing_uk_grid
+        data_type: float64
+        description: ""
+
+      - name: latitude
+        data_type: float64
+        description: ""
+
+      - name: longitude
+        data_type: float64
+        description: ""

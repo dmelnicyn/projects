@@ -1,0 +1,19 @@
+functional_area,road_type,length
+Central,A Road,19502.580713062925
+Central,B Road,4224.23241590088
+Central,Local Street,32796.56106041667
+Central,Minor Road,5687.125243723073
+Central,Motor vehicle-free,4422.27966059783
+Central,Unclassified,665.9229150406114
+Inner,A Road,44813.19718377791
+Inner,B Road,5354.603241543916
+Inner,Local Street,90376.74030405396
+Inner,Minor Road,20741.300901708662
+Inner,Motor vehicle-free,21082.903322554652
+Inner,Unclassified,2013.5109473411455
+Outer,A Road,51366.99881312752
+Outer,B Road,7970.54365792716
+Outer,Local Street,92479.43146630435
+Outer,Minor Road,20493.857643537995
+Outer,Motor vehicle-free,65642.40959346548
+Outer,Unclassified,9245.665101893172

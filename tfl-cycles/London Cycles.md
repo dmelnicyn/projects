@@ -205,5 +205,5 @@ Calculation of the weekday cycling intensity (kilometres cycled per kilometre of
 Further calculations and aggregations require - LTDS data. 
 The LTDS collects information about cycling stages and this information includes the coordinates of the origin and destination, from which a stage length can be calculated. This offers a source to calculate an average stage length as required.
 
-Use ![data lineage graph](tfl-cycles/dbt-dag.png)   
+Use ![data lineage graph](dbt/dbt-dag.png)
 and run the models from the Mart level.

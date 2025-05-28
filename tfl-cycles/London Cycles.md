@@ -60,7 +60,7 @@ Technologies:
 - Batch processing: python
 - Stream processing: no
 
-![Solution diagram](image.png)
+![Solution diagram](dbt/image.png)
 
 # Dashboard
 

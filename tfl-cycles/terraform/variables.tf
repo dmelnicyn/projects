@@ -1,37 +1,46 @@
 variable "credentials" {
+  type        = string
   description = "Path to the service account key file"
-  default = "/path/to/your/credentials.json"
+  default     = "/path/to/"key.json"
 }
 
 variable "project_id" {
-  description = "Project"
-  default     = "your_bigquery_dataset_id"
+  type        = string
+  description = "Google Cloud project ID"
+  default     = "your-project"
 }
 
 variable "region" {
-  description = "Region"
-  #Update the below to your desired region
-  default = "us-central1"
+  type        = string
+  description = "GCP region to deploy resources in"
+  default     = "us-central1"
 }
 
 variable "bq_dataset_name" {
-  description = "My BigQuery Dataset Name"
-  #Update the below to what you want your dataset to be called
-  default = "your_bigquery_dataset"
+  type        = string
+  description = "The name of the BigQuery dataset to create"
+  default     = "your-project"
 }
 
 variable "gcs_bucket_name" {
-  description = "My Storage Bucket Name"
-  #Update the below to a unique bucket name
-  default = "your_gcs_bucket"
+  type        = string
+  description = "Name of the GCS bucket to create"
+  default     = "your-gcs-bucket"
+
+  validation {
+    condition     = length(var.gcs_bucket_name) >= 3
+    error_message = "Bucket name must be at least 3 characters long."
+  }
 }
 
 variable "gcs_storage_class" {
-  description = "Bucket Storage Class"
+  type        = string
+  description = "Storage class of the GCS bucket"
   default     = "STANDARD"
 }
 
 variable "target_service_account_email" {
-  description = "Service Account Email"
-  default     = "your_service_account@project.iam.gserviceaccount.com"
+  type        = string
+  description = "Email address of the service account to grant IAM roles"
+  default     = "your@project-id.iam.gserviceaccount.com"
 }
